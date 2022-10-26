@@ -6,7 +6,7 @@
   "scripts": {
     "tsc": "tsc",
     "ts": "tsc -w",
-    "start": "src/index.ts",
+    "start": "node src/index.ts",
     "dev": "tsc && nodemon src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
