@@ -2,10 +2,11 @@
   "name": "backendts",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
     "tsc": "tsc",
     "ts": "tsc -w",
+    "start": "src/index.ts",
     "dev": "tsc && nodemon src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
