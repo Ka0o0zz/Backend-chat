@@ -2,9 +2,12 @@ import { connect } from "mongoose";
 
 const DB_URI = `${process.env.DB_URI}`;
 
-const dbInit = async () => {
-  await connect(DB_URI);
-  console.log("database is connect");
+export const dbConnection = async () => {
+  try {
+    await connect(DB_URI);
+    console.log("Database is connect");
+  } catch (error) {
+    console.log(error);
+    throw new Error("Error connection database");
+  }
 };
-
-export default dbInit;
