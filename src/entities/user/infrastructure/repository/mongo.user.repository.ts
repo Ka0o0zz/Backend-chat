@@ -1,5 +1,5 @@
 import { UserRepository } from "../../domain/user.repository";
-import UserModel from "../../../models/user.schema";
+import UserModel from "../../../../models/user.schema";
 
 export class MongoUserRepository implements UserRepository {
   async findUserById(uuid: string): Promise<any> {

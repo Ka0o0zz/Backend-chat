@@ -11,5 +11,8 @@ const authCtrl = new AuthController(authUseCase);
 
 router.post("/", authCtrl.registerCtrl);
 router.post("/login", authCtrl.loginCtrl);
+router.post("/verify", authCtrl.verifyOTPCtrl);
+
+router.get("/:uuid", authCtrl.generateOTPCtrl);
 
 export default router;

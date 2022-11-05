@@ -7,7 +7,7 @@ export class AuthValue implements AuthEntity {
   lastName?: string;
   email?: string;
   phone?: number;
-  password: string;
+  password?: string;
 
   constructor({
     name,
@@ -20,7 +20,7 @@ export class AuthValue implements AuthEntity {
     lastName?: string;
     email?: string;
     phone?: number;
-    password: string;
+    password?: string;
   }) {
     this.uuid = uuid();
     this.name = name;

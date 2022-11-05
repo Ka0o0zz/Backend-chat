@@ -33,4 +33,14 @@ export class AuthUseCase {
     const userLogin = this.authRepository.login(user);
     return userLogin;
   };
+
+  public generateOTP = async ({ uuid }: { uuid: string }) => {
+    const otpCode = this.authRepository.generateOTP(uuid);
+    return otpCode;
+  };
+
+  public verifyOTP = async ({ uuid, otp }: { uuid: string; otp: number }) => {
+    const otpCode = this.authRepository.verifyOTP({ uuid, otp });
+    return otpCode;
+  };
 }

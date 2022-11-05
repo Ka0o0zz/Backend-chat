@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { checkJwt } from "../../../middlewares/session";
+import { checkJwt } from "../../../../middlewares/session";
 import { UserUseCase } from "../../application/userUseCase";
 import { UserController } from "../controllers/user.controllers";
 import { MongoUserRepository } from "../repository/mongo.user.repository";

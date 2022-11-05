@@ -4,6 +4,7 @@ const UserSchema = new Schema(
   {
     uuid: {
       type: String,
+      unique: true,
     },
     name: {
       type: String,
@@ -20,11 +21,16 @@ const UserSchema = new Schema(
     },
     phone: {
       type: Number,
+      unique: true,
       require: true,
     },
     password: {
       type: String,
       require: true,
+    },
+    verified: {
+      type: Boolean,
+      default: false,
     },
   },
   {
